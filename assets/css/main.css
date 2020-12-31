@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './vendor/video-js.css';
+@import './vendor/video-js.theme.css';
+
+@font-face {
+	font-family: 'East Sea Dokdo';
+	font-style: normal;
+	font-weight: 400;
+	src: local(''),
+		 url( './fonts/east-sea-dokdo-v8-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+		 url( './fonts/east-sea-dokdo-v8-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+h1 {
+	font-family: 'Helvetica Neue', Helvetica, sans-serif;
+	font-weight: 800;
+	font-size: 8rem;
+	margin-top: 0px;
+	padding-top: 0.5em;
+	letter-spacing: -0.03em;
+}
+
+a {
+	color: white;
+}
+
+#header {
+	@apply p-3 text-center lg:px-0;
+}
+
+#header h1 {
+	@apply block pt-2 mx-auto my-2 tracking-wide text-red-600 transform text-7xl lg:text-9xl text-gradient bg-gradient-to-br from-red-400 to-red-800 rotate-3;
+
+	font-family: 'East Sea Dokdo', 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+.text-gradient {
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.main-width {
+	@apply max-w-sm px-4 py-6 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8;
+}
+
+.play-icon {
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	max-width: 150px;
+}
+
+#rating {
+	--percent: calc( var(--rating) / 10 * 100% );
+	display: inline-block;
+}
+
+#rating::before {
+	content: '★★★★★';
+	letter-spacing: 0.125rem;
+	background: linear-gradient( 90deg, #ecc94b var(--percent), #718096 var(--percent) );
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}

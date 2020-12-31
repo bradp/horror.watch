@@ -1,0 +1,29 @@
+{
+	"name": "horro.watch",
+	"version": "0.1.1",
+	"license": "MIT",
+	"author": {
+		"name": "Brad Parbs",
+		"email": "brad@bradparbs.com",
+		"url": "https://bradparbs.com"
+	},
+	"scripts": {
+		"build": "build:hugo",
+		"build:hugo": "yarn run clean && hugo --gc --environment development",
+		"build:hugo:prod": "yarn run clean && hugo --gc --minify --environment production",
+		"clean": "rimraf public",
+		"start": "yarn run build:hugo && hugo server --buildDrafts"
+	},
+	"dependencies": {
+		"@tailwindcss/forms": "^0.2.1",
+		"@tailwindcss/typography": "^0.3.1",
+		"autoprefixer": "^10.1.0",
+		"cssnano": "^4.1.10",
+		"postcss": "^8.2.1",
+		"postcss-cli": "^8.3.1",
+		"postcss-import": "^14.0.0",
+		"postcss-purgecss": "^2.0.3",
+		"rimraf": "^3.0.2",
+		"tailwindcss": "^2.0.2"
+	}
+}

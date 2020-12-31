@@ -1,0 +1,7 @@
+{{ $options := dict "config" "postcss.config.js" "inlineImports" true }}
+{{ $styles := resources.Get "css/main.css" }}
+{{ $styles = $styles | resources.PostCSS $options }}
+{{ if  hugo.IsProduction }}
+	{{ $styles = $styles | minify | fingerprint | resources.PostProcess }}
+{{ end }}
+<link href="{{ $styles.RelPermalink }}" rel="stylesheet" />

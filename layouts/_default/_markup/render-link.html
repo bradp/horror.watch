@@ -1,0 +1,1 @@
+<a href="{{ .Destination | absURL | safeURL }}" {{ with .Title}} title="{{ . | emojify | safeHTML }}" {{ end }}>{{ .Text | safeHTML }}</a>

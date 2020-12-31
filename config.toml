@@ -1,0 +1,48 @@
+# Site Details
+title = "horror.watch"
+description = "This is a description!"
+baseURL = "/"
+
+[taxonomies]
+genres = "genres"
+
+[params]
+# Used for Open Graph tags & Twitter card tags.
+title = "horror.watch"
+description = "so scary"
+images = ["images/share-image.png"]
+# Language
+languageCode = "en-us"
+DefaultContentLanguage = "en"
+# Build
+canonifyUrls = true
+disableHugoGeneratorInject = true
+enableRobotsTXT = true
+enableGitInfo = true
+disableFastRender = true
+# Content
+disableKinds = ["taxonomy", "term"]
+enableEmoji = true
+enableInlineShortcodes = true
+summaryLength = 40
+
+[permalinks]
+movies = "/movie/:title/"
+
+[imaging]
+resampleFilter = 'Lanczos'
+quality = 85
+
+[imaging.exif]
+includeFields = ""
+disableDate = true
+disableLatLong = true
+
+[build]
+writeStats = true
+
+[social]
+twitter = "bradparbs"
+
+[Author]
+name = "Brad Parbs"

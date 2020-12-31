@@ -1,0 +1,5 @@
+yarn-error.log
+resources/
+hugo_stats.json
+public
+scrape.php
