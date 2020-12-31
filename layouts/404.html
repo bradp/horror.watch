@@ -1,16 +1,17 @@
 {{ define "main" }}
-	{{ .Content }}
-	<section id="example" class="mx-auto w-full max-w-sm text-gray-700 body-font">
-		<div class="order-1 px-2 max-w-md text-sm md:text-base lg:px-0">
-			<header class="mb-6">
-				<h2 class="text-gray-400 text-4xl font-bold leading-none select-none lg:text-6xl">404.</h2>
-				<h3 class="text-xl font-light leading-normal md:text-3xl lg:text-3xl">We couldn't find this page.</h3>
-			</header>
-			<button
-				class="inline px-4 py-2 text-white text-sm font-medium leading-5 hover:bg-purple-200 bg-purple-400 border border-transparent rounded-lg"
-			>
-				Back to Homepage
-			</button>
-		</div>
-	</section>
+<div class="grid">
+	<svg class="pb-10 mx-auto text-3xl text-white w-96" style="enable-background:new 0 0 24 24;" version="1.1" viewBox="0 0 24 24" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<g id="XMLID_1387_">
+			<polyline id="XMLID_1388_" points="   5.705,3.922 6.5,5.5 8.5,5.5 9,7.5  " style="fill:none;stroke:white;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;"/>
+			<polyline id="XMLID_1389_" points="   19.5,14.5 17.5,15.5 17,18 15.5,19  " style="fill:none;stroke:white;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;"/>
+			<path d="   M7.5,13.5v-4h1c0.552,0,1,0.448,1,1l0,0c0,0.552-0.448,1-1,1h-1h1c0.552,0,1,0.448,1,1v1" id="XMLID_1390_" style="fill:none;stroke:white;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;"/>
+			<path d="   M14.5,13.5v-4h1c0.552,0,1,0.448,1,1l0,0c0,0.552-0.448,1-1,1h-1" id="XMLID_1391_" style="fill:none;stroke:white;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;"/>
+			<line id="XMLID_1392_" style="fill:none;stroke:white;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="12" x2="12" y1="9.5" y2="13.5"/>
+			<rect height="2" id="XMLID_1393_" style="fill:none;stroke:white;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" width="17" x="3.5" y="21.5"/>
+			<path d="   M4.5,21.5V8c0-4.142,3.358-7.5,7.5-7.5l0,0c4.142,0,7.5,3.358,7.5,7.5v13.5" id="XMLID_42_" style="fill:none;stroke:white;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;"/>
+		</g>
+	</svg>
+	<span class="pb-10 mx-auto text-4xl text-white">that page is dead</span>
+	<a href={{ "/" | absURL }} class="pb-10 mx-auto text-2xl text-red-300">← back</a>
+</div>
 {{ end }}
