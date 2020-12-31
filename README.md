@@ -1,1 +1,2 @@
 - 404 page
+- genre page

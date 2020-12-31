@@ -10,8 +10,8 @@
 	font-style: normal;
 	font-weight: 400;
 	src: local(''),
-		 url( './fonts/east-sea-dokdo-v8-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-		 url( './fonts/east-sea-dokdo-v8-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+		 url( '/assets/fonts/east-sea-dokdo-v8-latin-regular.woff2' ) format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+		 url( '/assets/fonts/east-sea-dokdo-v8-latin-regular.woff' ) format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 h1 {
@@ -44,7 +44,7 @@ a {
 }
 
 .main-width {
-	@apply max-w-sm px-4 py-6 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8;
+	@apply max-w-md mx-auto sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-xl;
 }
 
 .play-icon {
