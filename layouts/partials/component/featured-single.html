@@ -1,4 +1,7 @@
-<div class="transition duration-300 ease-in-out transform border-4 border-black rounded-lg shadow-md md:my-6 hover:scale-110 hover:rotate-2">
+{{ $rotate := shuffle (slice "hover:rotate-2" "hover:-rotate-2" "hover:rotate-1" "hover:-rotate-1" "hover:rotate-3" "hover:-rotate-3") }}
+{{ range first 1 $rotate }}
+<div class="{{ . }} transition duration-300 ease-in-out transform border-4 border-black rounded-lg shadow-md md:my-6 hover:scale-110">
+{{ end }}
 	<a href="{{ .linkUrl | absURL }}" title="{{ .title | safeHTML }}">
 		<img class="object-center w-full h-auto max-h-96" src="{{ .posterUrl | absURL }}" alt="{{ .title | safeHTML }} poster">
 		<div class="flex h-20 bg-black">

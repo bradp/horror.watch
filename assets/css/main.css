@@ -27,20 +27,23 @@ a {
 	color: white;
 }
 
-#header {
-	@apply p-3 text-center lg:px-0;
+.header {
+	@apply p-3 text-center;
 }
 
-#header h1{
+.header h1 {
 	@apply block pt-2 mx-auto my-2 tracking-wide transform text-7xl lg:text-9xl -rotate-1;
 
 	font-family: 'East Sea Dokdo', 'Helvetica Neue', Helvetica, sans-serif;
 }
 
-#header h1 a{
+.header h1 a {
 	@apply text-red-700;
 	text-shadow: 6px 0px rgba( 136, 0, 0, 0.6), -7px 12px 3px rgba( 66, 31, 31, 0.4 );
+}
 
+.nav-item {
+	@apply inline-flex items-center px-3 py-1 text-lg leading-none text-red-400 transform bg-gray-800 rounded hover:bg-gray-600 hover:scale-110 hover:text-red-200;
 }
 
 .main-width {

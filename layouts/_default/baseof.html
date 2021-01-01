@@ -3,20 +3,16 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>{{ .Site.Title }} {{ if (and (ne .Title .Site.Title) (ne (len .Title) 0)) }} - {{ .Title }} {{ end }}</title>
-
 		{{- partial "head/metadata.html" . -}}
 		{{- partial "head/favicons.html" . -}}
 		{{- partial "head/styles.html" . -}}
 	</head>
 
 	<body class="flex flex-col text-red-400 bg-black bg-gradient-to-tl from-gray-700 via-gray-900 to-black">
-
 		<div id="top"></div>
+		{{- partial "header/header" . -}}
 		<div class="main-width">
-			{{- partial "header/header" . -}}
-
 			<main>{{- block "main" . }}{{- end }}</main>
-
 			{{- partial "footer/footer" . -}}
 			{{- partial "footer/scripts" . -}}
 		</div>

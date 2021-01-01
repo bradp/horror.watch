@@ -1,2 +1,3 @@
 - 404 page
 - genre page
+- lazy load images

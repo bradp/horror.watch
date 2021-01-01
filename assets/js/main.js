@@ -3,7 +3,9 @@ document.addEventListener( 'DOMContentLoaded', function() {
 
 	modalTrigger.addEventListener( 'click', (event) => {
 			event.preventDefault();
-			document.getElementById('watch').classList.remove('hidden');
+			document.getElementById( 'watch' ).classList.remove( 'hidden' );
+			videojs( 'video-el' ).play();
+
 		} );
 } );
 
@@ -13,5 +15,6 @@ document.addEventListener( 'DOMContentLoaded', function() {
 
 	overlay.addEventListener( 'click', function() {
 		modal.classList.add( 'hidden' );
+		videojs( 'video-el' ).pause();
 	} );
 } );
