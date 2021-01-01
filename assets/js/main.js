@@ -1,26 +1,17 @@
-/* Place your JS here */
-function view() {
-	let modalTrigger = document.querySelectorAll( '.watch-trigger' );
-	modalTrigger.forEach( function( trigger ) {
-		trigger.addEventListener( 'click', function( event ) {
-			event.preventDefault();
-			document.getElementById( 'watch' ).classList.remove( 'hidden' );
-		} );
-	} );
-}
+document.addEventListener( 'DOMContentLoaded', function() {
+	let modalTrigger = document.getElementById( 'watch-trigger' );
 
-function unview() {
+	modalTrigger.addEventListener( 'click', (event) => {
+			event.preventDefault();
+			document.getElementById('watch').classList.remove('hidden');
+		} );
+} );
+
+document.addEventListener( 'DOMContentLoaded', function() {
 	let modal = document.getElementById( 'watch' );
 	let overlay = document.getElementById( 'watch-overlay' );
 
 	overlay.addEventListener( 'click', function() {
 		modal.classList.add( 'hidden' );
 	} );
-}
-
-function init( f ) {
-	document.addEventListener( 'DOMContentLoaded', f );
-}
-
-init( view );
-init( unview );
+} );

@@ -3,7 +3,7 @@
 back
 <div class="overflow-hidden bg-gray-900 border-2 border-black rounded-lg shadow-lg w-lg-screen">
 	<div class="bg-top bg-cover h-96" style="background-image: url( {{ .Params.cover | absURL }} )">
-		<button class="relative w-full h-full opacity-75 watch-trigger hover:opacity-100">
+		<button id="watch-trigger" class="relative w-full h-full opacity-75 hover:opacity-100">
 			<svg class="absolute text-white pointer-events-none fill-current play-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
 			  <path fill-rule="evenodd" d="M14 3H2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2z"/>
 			  <path fill-rule="evenodd" d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z"/>
@@ -23,7 +23,7 @@ back
 		</div>
 		<div class="grid md:grid-cols-3">
 			<div class="col-span-2">
-				<div class="pb-6 text-2xl text-gray-200 md:text-3xl">{{ .Params.tagline }}</div>
+				{{ if gt (len .Params.tagline) 3 }}<div class="pb-6 text-2xl text-gray-200 md:text-3xl">{{ .Params.tagline }}</div>{{ end }}
 				<div class="pb-6 text-lg text-gray-400 md:text-xl">{{ .Params.description }}</div>
 				<div class="py-6 text-gray-500 text-md md:text-xl">
 					{{ range .Params.genres }}
@@ -37,23 +37,23 @@ back
 					{{ end }}
 				</div>
 				<div class="py-6">
-					<a href="https://imdb.com/title/{{ .Params.imdb_id }}" target="_blank" rel="noopener" class="h-10 px-2 pb-10 mr-2 text-xs font-bold text-gray-400 transition duration-300 ease-in-out transform bg-gray-700 rounded-lg shadow-inner hover:scale-110 hover:bg-gray-600 md:py-1" type="button" style="transition: all .15s ease">
+					<a href="https://imdb.com/title/{{ .Params.imdb_id }}" target="_blank" rel="noopener" class="px-3 pt-2 pb-3 mb-10 mr-2 text-gray-400 transition duration-300 ease-in-out transform bg-gray-700 rounded-lg shadow-inner hover:scale-110 hover:bg-gray-600" type="button" style="transition: all .15s ease">
 						<svg style="color: #E6B91E" class="inline w-6 h-6 mr-2 align-middle fill-current" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 							<path d="M14.31 9.588v.005c-.077-.048-.227-.07-.42-.07v4.815c.27 0 .44-.06.5-.165.062-.104.095-.405.095-.885v-2.866c0-.33-.004-.54-.033-.63-.022-.096-.067-.163-.14-.204zM22.416 0H1.62C.742.06.06.744 0 1.596V22.38c.06.874.712 1.542 1.555 1.617.015.003.03.003.045.003h20.845c.88-.088 1.55-.826 1.555-1.71V1.71C24 .82 23.305.07 22.416 0zM4.792 15.626H2.887V8.26h1.905v7.366zm6.54-.002H9.67v-4.97L9 15.623H7.812l-.698-4.86-.007 4.86H5.44V8.26h2.468c.083.523.16 1.048.23 1.574l.27 1.87.442-3.444h2.483v7.364zm4.977-2.18c0 .655-.044 1.094-.104 1.32-.062.22-.17.4-.326.52-.15.13-.34.218-.57.266-.223.045-.57.075-1.02.075l-.004-.002H11.98V8.26h1.426c.914 0 1.45.047 1.77.128.325.09.575.225.745.42.165.18.273.404.313.645.05.235.076.705.076 1.402v2.588zm4.944.475c0 .45-.045.764-.09.99-.06.224-.195.404-.405.568-.226.166-.48.24-.78.24-.22 0-.5-.06-.68-.136-.19-.094-.358-.237-.515-.427l-.116.47h-1.717V8.26l-.02-.003h1.8v2.4c.15-.175.315-.31.51-.4.196-.083.466-.127.69-.127.226-.003.45.036.66.115.17.07.32.185.436.33.09.125.15.27.18.42.03.138.044.43.044.87v2.054zM19.08 11.205c-.12 0-.194.04-.225.12-.03.08-.06.29-.06.624v1.946c0 .324.03.533.06.623.04.086.13.14.226.134.12 0 .272-.047.3-.14.03-.097.046-.32.046-.674l.03-.002v-1.89c0-.303-.015-.508-.06-.603-.044-.1-.195-.14-.315-.14z"/>
 						</svg>
-						<span class="inline-block mt-2">View on IMDB</span>
+						<span class="inline-block align-middle">View on IMDB</span>
 					</a>
-					<a href="https://twitter.com/intent/tweet?url={{ .Permalink }}" target="_blank" rel="noopener" class="h-10 px-2 pb-10 mr-2 text-xs font-bold text-gray-400 transition duration-300 ease-in-out transform bg-gray-700 rounded-lg shadow-inner hover:scale-110 hover:bg-gray-600 md:py-1" type="button" style="transition: all .15s ease">
+					<a href="https://twitter.com/intent/tweet?url={{ .Permalink }}" target="_blank" rel="noopener" class="px-3 pt-2 pb-3 mb-10 mr-2 text-gray-400 transition duration-300 ease-in-out transform bg-gray-700 rounded-lg shadow-inner hover:scale-110 hover:bg-gray-600" type="button" style="transition: all .15s ease">
 						<svg style="color: #1DA1F2" class="inline w-6 h-6 mr-2 align-middle fill-current" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 							<path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
 						</svg>
-						<span class="inline-block mt-2">Share on Twitter</span>
+						<span class="inline-block align-middle">Share on Twitter</span>
 					</a>
-					<a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" target="_blank" rel="noopener" class="h-10 px-2 pb-10 mr-2 text-xs font-bold text-gray-400 transition duration-300 ease-in-out transform bg-gray-700 rounded-lg shadow-inner hover:scale-110 hover:bg-gray-600 md:py-1" type="button" style="transition: all .15s ease">
+					<a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" target="_blank" rel="noopener" class="px-3 pt-2 pb-3 mb-10 mr-2 text-gray-400 transition duration-300 ease-in-out transform bg-gray-700 rounded-lg shadow-inner hover:scale-110 hover:bg-gray-600" type="button" style="transition: all .15s ease">
 						<svg style="color: #1877F2" class="inline w-6 h-6 mr-2 align-middle fill-current" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 							<path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
 						</svg>
-						<span class="inline-block mt-2">Share on Facebook</span>
+						<span class="inline-block align-middle">Share on Facebook</span>
 					</a>
 				</div>
 			</div>
