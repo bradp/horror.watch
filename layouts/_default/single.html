@@ -19,7 +19,7 @@ back
 			{{ $mins := sub $runtime $h_min }}
 			<div class="flex-none w-1/2 pb-5 md:w-auto md:pb-0">{{ .Params.released }}</div>
 			<div id="rating" class="flex-none w-1/2 pb-5 ml-0 md:w-auto md:ml-10 md:pb-0" style="--rating: {{ .Params.rating }};" aria-label="Rating is {{ .Params.rating }} out of 5."></div>
-			<div class="flex-none w-full pb-5 ml-0 md:w-auto md:ml-10 md:pb-0">{{ $hours }}<span class="text-gray-600"> hours, </span>{{ $mins }}<span class="text-gray-600"> minutes </span></div>
+			<div class="flex-none w-full pb-5 ml-0 md:w-auto md:ml-10 md:pb-0">{{ $hours }}<span class="text-gray-600"> hour, </span>{{ $mins }}<span class="text-gray-600"> minutes </span></div>
 		</div>
 		<div class="grid md:grid-cols-3">
 			<div class="col-span-2">
