@@ -74,7 +74,7 @@ back
 				class="video-js vjs-theme-sea vjs-big-play-centered"
 				controls
 				playsinline
-				preload="false"
+				preload="true"
 				data-setup='{
 					"autoplay": false,
 					"fluid": true,
@@ -87,6 +87,7 @@ back
 				<source src="{{ .Params.file }}" type="video/mp4">
 				<p class="vjs-no-js">To view this video please enable JavaScript.</p>
 			</video>
+			<div class="p-8 text-3xl font-extrabold text-red-400">Video not playing? <a class="text-red-300 underline" href="{{ .Params.file }}">You can also download it</a></div>
 		</div>
 	</div>
 </section>
