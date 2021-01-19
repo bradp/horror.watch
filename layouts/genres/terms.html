@@ -1,0 +1,12 @@
+{{ define "main" }}
+	<h1>{{ .Title }}</h1>
+	<section class="mx-auto my-6">
+	{{ range .Pages }}
+		<h2>
+			<a href="{{ .Permalink | absURL }}" title="{{ .Title | safeHTML }}">
+				{{ .Title | safeHTML }}
+			</a>
+		</h2>
+	{{ end }}
+	</section>
+{{ end }}

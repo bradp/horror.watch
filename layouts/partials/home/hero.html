@@ -1,4 +1,4 @@
-<section id="hero" class="my-6">
+<section id="hero" class="m-6 md:mx-0">
 	<div class="flex flex-col overflow-hidden bg-black border-2 border-black rounded-lg shadow-lg lg:flex-row sm:mx-auto">
 		<div class="relative lg:w-1/2">
 			<img src="assets/images/cover.jpg" alt="" class="object-cover object-center w-full lg:absolute h-80 lg:h-full">
@@ -7,7 +7,7 @@
 			</svg>
 		</div>
 		<div class="p-10">
-			<h2 class="text-5xl font-extrabold leading-none">
+			<h2 class="text-5xl leading-none">
 				<p>Stream horror movies.
 				<p>100% free, always.
 			</h2>
@@ -16,7 +16,10 @@
 				<p>You'll never feel safe again.
 			</div>
 
-			{{ partial "component/button-browse-all.html" . }}
+			<div class="flex">
+				{{ partial "component/button-browse-all.html" . }}
+				{{ partial "component/button-browse-genre.html" . }}
+			</div>
 
 		</div>
 	</div>
