@@ -4,7 +4,7 @@
 {{ end }}
 
 	<a href="{{ .linkUrl | absURL }}" title="{{ .title | safeHTML }}">
-		<img loading="lazy" class="object-center w-full h-auto max-h-96" src="{{ .posterUrl | absURL }}" alt="{{ .title | safeHTML }} poster" width="282" height="384">
+		<img loading="lazy" class="object-center w-full h-auto" src="{{ .posterUrl | absURL }}" alt="{{ .title | safeHTML }} poster">
 		<div class="flex h-20">
 			<span class="self-center p-3 mx-auto text-lg text-gray-100">
 				{{ .title | safeHTML }}
