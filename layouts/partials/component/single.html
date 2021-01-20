@@ -2,6 +2,7 @@
 {{ range first 1 $rotate }}
 <div class="{{ . }} transition duration-300 ease-in-out transform border-4 border-black rounded-lg shadow-md md:my-6 hover:scale-110 bg-black">
 {{ end }}
+
 	<a href="{{ .linkUrl | absURL }}" title="{{ .title | safeHTML }}">
 		<img loading="lazy" class="object-center w-full h-auto max-h-96" src="{{ .posterUrl | absURL }}" alt="{{ .title | safeHTML }} poster" width="282" height="384">
 		<div class="flex h-20">
@@ -11,3 +12,4 @@
 		</div>
 	</a>
 </div>
+
