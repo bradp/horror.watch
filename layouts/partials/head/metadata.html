@@ -2,26 +2,24 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ if .IsPage }}{{ .Summary }}{{ else }}{{ .Site.Params.description }}{{ end }}{{ end }}" />
+<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}" />
 <meta name="keywords" content="{{ $.Site.Params.Keywords }}" />
 <meta name="author" content="{{ .Site.Params.author }}" />
 
 <meta property="og:type" content="website" />
-<meta property="og:title" content="{{ if ne .URL "/" }}{{ .Title }} &middot; {{ end }}{{ .Site.Title }}"/>
-<meta property="og:description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}"/>
-<meta property="og:site_name" content="{{ .Site.Title }}"/>
-<meta property="og:url" content="{{ .Permalink }}"/>
+<meta property="og:title" content="{{ .Title }} &middot; {{ .Site.Title }}" />
+<meta property="og:description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}" />
+<meta property="og:site_name" content="{{ .Site.Title }}" />
+<meta property="og:url" content="{{ .Permalink }}" />
 <meta property="og:locale" content="en">
 {{ if .Params.poster }}
-	<meta property="og:image" content="http://example.com{{ .Params.poster | relURL }}"/>
-	<meta property="og:image:secure_url" content="{{ .Params.poster | absURL }}"/>
+	<meta property="og:image" content="{{ .Params.poster | absURL }}" />
+	<meta property="og:image:secure_url" content="{{ .Params.poster | absURL }}" />
 {{ else }}
-	<meta property="og:image" content="http://example.com{{ .Site.Params.poster | relURL }}"/>
-	<meta property="og:image:secure_url" content="{{ .Site.Params.poster | absURL }}"/>
+	<meta property="og:image" content="http://example.com{{ .Site.Params.poster | relURL }}" />
+	<meta property="og:image:secure_url" content="{{ .Site.Params.poster | absURL }}" />
 {{ end }}
 
-
-{{- template "_internal/twitter_cards.html" . -}}
 {{- template "_internal/schema.html" . -}}
 
 {{ with .OutputFormats.Get "RSS" }}<link href="{{ .Permalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />{{ end }}
