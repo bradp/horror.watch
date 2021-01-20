@@ -8,5 +8,5 @@
 	{{ else }}
 	{{- $js := $js | minify -}}
 	{{- $secureJS := $js | resources.Fingerprint "sha512" -}}
-	<script src="{{ $secureJS.Permalink }}" integrity="{{ $secureJS.Data.Integrity }}"></script>¨
+	<script src="{{ $secureJS.Permalink }}" integrity="{{ $secureJS.Data.Integrity }}"></script>
 {{ end }}
