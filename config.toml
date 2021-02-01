@@ -1,7 +1,7 @@
 # Site Details
 title = "horror.watch"
 description = "This is a description!"
-baseURL = "/"
+baseURL = "https://horror.watch/"
 
 [taxonomies]
 genres = "genres"
