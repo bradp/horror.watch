@@ -18,9 +18,9 @@
 <meta property="og:url" content="{{ .Permalink }}">
 <meta property="og:locale" content="en">
 {{ if .Params.poster }}
-	<meta property="og:image" content="https://horror.watch{{ .Params.poster | absURL }}">
-	<meta property="og:image:secure_url" content="https://horror.watch{{ .Params.poster | absURL }}">
-	<meta name="twitter:image" content="https://horror.watch{{ .Params.poster | absURL }}">
+	<meta property="og:image" content="{{ .Params.poster | absURL }}">
+	<meta property="og:image:secure_url" content="{{ .Params.poster | absURL }}">
+	<meta name="twitter:image" content="{{ .Params.poster | absURL }}">
 {{ end }}
 
 
