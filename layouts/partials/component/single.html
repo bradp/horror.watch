@@ -1,6 +1,6 @@
 {{ $rotate := shuffle (slice "hover:rotate-2" "hover:-rotate-2" "hover:rotate-1" "hover:-rotate-1" "hover:rotate-3" "hover:-rotate-3") }}
 {{ range first 1 $rotate }}
-<div class="{{ . }} transition duration-300 ease-in-out transform border-4 border-black rounded-lg shadow-md md:my-6 hover:scale-110 bg-black">
+<div class="md:{{ . }} transition duration-300 ease-in-out transform border-4 border-black rounded-lg shadow-md md:my-6 hover:scale-90 md:hover:scale-110 bg-black">
 {{ end }}
 
 	<a href="{{ .linkUrl | absURL }}" title="{{ .title | safeHTML }}">
@@ -12,4 +12,3 @@
 		</div>
 	</a>
 </div>
-
