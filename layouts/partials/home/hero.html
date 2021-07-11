@@ -17,8 +17,22 @@
 			</div>
 
 			<div class="flex flex-wrap">
-				{{ partial "component/button-browse-all.html" . }}
-				{{ partial "component/button-browse-genre.html" . }}
+				<div class="justify-center">
+					<a href="https://horror.watch/movies/" class="inline-flex items-center justify-center h-12 px-6 mr-6 text-white transition duration-200 bg-red-500 rounded-lg hover:bg-red-900 mb-10">
+						Browse All Movies
+						<svg class="inline-block w-2 ml-2 fill-current" viewBox="0 0 12 12">
+							<path d="M9.707,5.293l-5-5A1,1,0,0,0,3.293,1.707L7.586,6,3.293,10.293a1,1,0,1,0,1.414,1.414l5-5A1,1,0,0,0,9.707,5.293Z"></path>
+						</svg>
+					</a>
+				</div>
+				<div class="justify-center">
+					<a href="https://horror.watch/genres/" class="inline-flex items-center justify-center h-12 px-6 mr-6 text-white transition duration-200 bg-red-500 rounded-lg hover:bg-red-900">
+						Browse by Genre
+						<svg class="inline-block w-2 ml-2 fill-current" viewBox="0 0 12 12">
+							<path d="M9.707,5.293l-5-5A1,1,0,0,0,3.293,1.707L7.586,6,3.293,10.293a1,1,0,1,0,1.414,1.414l5-5A1,1,0,0,0,9.707,5.293Z"></path>
+						</svg>
+					</a>
+				</div>
 			</div>
 
 		</div>
