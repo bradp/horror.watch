@@ -27,7 +27,7 @@ enableInlineShortcodes = true
 summaryLength = 40
 
 [permalinks]
-movies = "/movie/:title/"
+movies = "/movie/:title"
 
 [imaging]
 resampleFilter = 'Lanczos'
