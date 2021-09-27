@@ -1,6 +1,6 @@
 # Site Details
-title = "horror.watch"
-description = "This is a description!"
+title = "horror.watch - Watch hundreds of public domain horror movies, 100% free."
+description = "Watch hundreds of public domain horror movies for free."
 baseURL = "https://horror.watch/"
 
 [taxonomies]
