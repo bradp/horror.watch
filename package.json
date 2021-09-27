@@ -8,13 +8,13 @@
 		"url": "https://bradparbs.com"
 	},
 	"scripts": {
-		"build": "build:hugo",
-		"build:hugo": "yarn run clean && hugo --gc --environment development",
-		"build:hugo:prod": "yarn run clean && hugo --gc --minify --environment production",
+		"build": "yarn run clean && hugo --gc --environment development",
+		"build:prod": "yarn run clean && hugo --gc --minify --environment production",
 		"clean": "rimraf public",
 		"start": "yarn run build:hugo && hugo server --buildDrafts"
 	},
 	"dependencies": {
+		"@fullhuman/postcss-purgecss": "^4.0.3",
 		"@tailwindcss/forms": "^0.2.1",
 		"@tailwindcss/typography": "^0.3.1",
 		"autoprefixer": "^10.1.0",
